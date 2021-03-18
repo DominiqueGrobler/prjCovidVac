@@ -1,0 +1,22 @@
+﻿Covid 19 Vac
+----------------------------------------
+Genreal Info
+----------------------------------------
+Hospital Name: Greenacers
+Address: 1 Cape Road 
+Private or Public: Private
+Province: EC
+
+-----------------------------------------
+Information of each person:
+-----------------------------------------
+ID number:
+Medical AId:
+Name:
+Surname:
+Refering Dr:
+Blood Type:
+Allergies:
+Had Covid:
+Vaccine they are getting:
+------------------------------------------
