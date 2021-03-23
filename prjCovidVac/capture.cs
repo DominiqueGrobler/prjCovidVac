@@ -8,42 +8,71 @@ namespace prjCovidVac
 {
     class capture
     {
+        Info i = new Info();
+        //variables to be added to array
+        private static String ID_Number;
+        private static String MedicalAid;
+        private static String Name;
+        private static String Surname;
+        private static String RefDr;
+        private static Char BloodType;
+        private static String Allergies;
+        private static Boolean CovidPositive;
+        private static String Vac;
+
         public void getPatientDetails()
         {
-            Info i = new Info();
+            Console.Write("Enter the Hospital Name:");
+            i.setHospital_Name(Console.ReadLine());
+
+            Console.Write("Is it a Private or Public Hospital:");
+            i.setHospitalType(Convert.ToBoolean(Console.ReadLine()));
+
+            Console.Write("Enter the Address:");
+            i.setAddress(Console.ReadLine());
+
+            Console.Write("In what Province is the Hospital:");
+            i.setProvince(Console.ReadLine());
 
             Console.Clear();
+
+            Console.WriteLine("Enter the number of patients: ");
+            i.setArray(Convert.ToInt32(Console.ReadLine()));
+
+            
             // this is used to loop to the size of the patients you set in array
             for (int x = 0; x < i.size(); x++)// the size is there to see how many patients was entered in the array
             {
                 Console.Write("Please enter the patient ID number: ");
-                String ID_Number = Console.ReadLine();
+                ID_Number = Console.ReadLine();
 
                 Console.Write("Please enter the patient " + (x + 1) + "name: ");
-                String Name = Console.ReadLine();
+                Name = Console.ReadLine();
 
                 Console.Write("Please enter the patient surname: ");
-                String Surname = Console.ReadLine();
+                Surname = Console.ReadLine();
 
                 Console.Write("Please enter the patient Medical Aid: ");
-                String MedicalAid = Console.ReadLine();
+                MedicalAid = Console.ReadLine();
 
                 Console.Write("Please enter the patient's Docter name: ");
-                String RefDr = Console.ReadLine();
+                RefDr = Console.ReadLine();
 
                 Console.Write("Please enter the patient blood type: ");
-                char BloodType = Convert.ToChar(Console.ReadLine());
+                BloodType = Convert.ToChar(Console.ReadLine());
 
                 Console.Write("Please enter any allergies patient has: ");
-                String Allergies = Console.ReadLine();
+                Allergies = Console.ReadLine();
 
                 Console.Write("Please enter if the patient is Covid Positive (True/ Flase) :  ");
-                Boolean CovidPositive = Convert.ToBoolean(Console.ReadLine());
+                CovidPositive = Convert.ToBoolean(Console.ReadLine());
 
                 Console.Write("Please enter if the patient's has had any vaccine: ");
-                String strVac = Console.ReadLine();
+                Vac = Console.ReadLine();
 
-               // i.addPerson(ID_Number, Name, Surname, MedicalAid, RefDr, BloodType, Allergies, CovidPositive, strVac);
+                Console.WriteLine("\n");
+
+               i.addPerson(ID_Number, Name, Surname, MedicalAid, RefDr, BloodType, Allergies, CovidPositive, Vac);
             }
             
         }

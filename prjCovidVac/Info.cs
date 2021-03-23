@@ -12,12 +12,11 @@ namespace prjCovidVac
         private static int iSizeArray = 0;
         private static int iCounter = 0;
 
+        #region gets and sets for the main vars
         private static String strHospital_Name;
         private static String strAddress;
-        private static bool bType;
-        private static char cProvince;
-
-        #region gets and sets
+        private static Boolean bType;
+        private static String cProvince;
 
         public void setHospital_Name(String hospitalName)
         {
@@ -49,12 +48,12 @@ namespace prjCovidVac
             return bType;
         }
 
-        public void setProvince(Char province)
+        public void setProvince(String province)
         {
             cProvince = province;
         }
 
-        public Char getProvince()
+        public String getProvince()
         {
             return cProvince;
         }
@@ -72,7 +71,7 @@ namespace prjCovidVac
         private static String[] Vaccine;
         #endregion
 
-        #region setting arrays 
+        #region setting array size 
         public void setArray(int num)
         {
             ID_Number = new String[num];
